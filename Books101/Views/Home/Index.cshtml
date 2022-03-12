@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Books101</h1>
+    <p>The best source for Ebooks on the internet.</p>
+</div>
+<div class="slideshow-container">
+
+<center><div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="~/images/library.jpg" style="width:60% " runat="server">
+
+  <div class="text">Imagination is everything</div>
+</div></center>
+
+<center><div class="mySlides fade">
+  <div class="numbertext">2 / 4 </div>
+  <img src="~/images/alfons-morales-YLSwjSy7stw-unsplash.jpg" style="width:67%" runat="server">
+  <div class="text">Learn for a bettter future</div>
+</div></center>
+
+<center><div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="~/images/history.jpg" style="width:60%" runat="server">
+  <div class="text">GRead.GRind.GRow</div>
+</div></center>
+
+<center><div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="~/images/genra.jpg" style="width:67%" runat="server">
+  <div class="text">You are what you read.</div>
+</div></center>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin justo et nibh varius lobortis. Maecenas gravida, velit sed feugiat sodales, arcu odio posuere massa, at condimentum lacus orci eu lectus. Fusce varius, magna eget scelerisque luctus, nisi arcu facilisis turpis, in vulputate felis tellus ut augue. Mauris vulputate in mauris id tincidunt. Mauris quis rutrum lacus. Maecenas eleifend magna ut mattis faucibus. Integer eu neque risus.</p>
+<p>Phasellus eu maximus sem. Mauris pretium tristique orci et ultrices. Nulla id nulla scelerisque, lobortis ex at, egestas lorem. Donec nec dictum ipsum. In sed tincidunt sem. Etiam volutpat suscipit augue a hendrerit. Nulla facilisi. Phasellus euismod, enim sit amet fringilla tincidunt, ante massa laoreet turpis, et efficitur mauris quam ac est. Proin tincidunt vehicula ullamcorper. Quisque vestibulum augue felis, eu rhoncus erat gravida eget. Vestibulum aliquam neque id fermentum rhoncus. Nunc orci nisi, aliquet et viverra id, vestibulum iaculis dui. Cras eu commodo massa, in consectetur mi. Praesent feugiat pulvinar felis a lacinia.</p>
+<p>Aenean ac interdum justo. Vestibulum feugiat elit et fringilla finibus. Maecenas eros diam, laoreet ac ante sit amet, egestas porttitor arcu. Vestibulum tempus, libero a euismod pulvinar, ligula magna posuere tortor, vitae viverra tellus leo eget nisi. Fusce rutrum libero eros, ut congue justo pretium vitae. In hac habitasse platea dictumst. Integer laoreet felis sed odio tempus, a vestibulum libero hendrerit.</p>
+<p>Donec feugiat pulvinar nisl, vitae auctor nisl finibus et. Mauris euismod cursus nunc vel commodo. Suspendisse imperdiet tristique nunc, eget sodales sem pellentesque quis. Nulla sodales justo at elit bibendum, vitae egestas enim laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc ut volutpat lectus. Sed viverra sed lectus nec venenatis.</p>
+<p>Nullam euismod libero eu mi feugiat, vel varius ex volutpat. Aenean sed dictum diam, at bibendum quam. Integer pulvinar lacinia leo, vitae vulputate purus pellentesque eget. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed commodo pretium sapien a maximus. Nulla facilisi. Nam commodo nisi eu sodales rutrum. Pellentesque lacinia dolor id velit consequat laoreet. Praesent nec pharetra lorem. Donec sit amet tortor luctus, placerat tellus suscipit, volutpat ante. Morbi non eleifend lorem, ac porttitor lorem. Cras vitae sollicitudin lectus, in dapibus mi.</p>
+<p>THE END</p>
